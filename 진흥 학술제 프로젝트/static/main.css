@@ -1,0 +1,81 @@
+/* 모든 요소에 대해 기본 설정 */
+* {
+    box-sizing: border-box;  /* 모든 요소의 크기를 border와 padding을 포함한 크기로 설정 */
+    margin: 0;  /* 기본 여백 제거 */
+    padding: 0;  /* 기본 패딩 제거 */
+}
+
+/* body 스타일 설정 */
+body {
+    font-family: 'Arial', sans-serif;  /* 글꼴을 Arial로 설정 */
+    background-color: #f5f5f5;  /* 페이지 배경색을 연한 회색으로 설정 */
+    color: #333;  /* 글씨 색상은 어두운 회색으로 설정 */
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #000;  /* 헤더 배경색을 검정색으로 설정 */
+    color: #fff;  /* 텍스트 색상은 흰색으로 설정 */
+    text-align: center;  /* 텍스트를 중앙 정렬 */
+    padding: 20px;  /* 헤더 안쪽 여백을 20px로 설정 */
+}
+
+/* 내비게이션 스타일 */
+nav {
+    margin-top: 10px;  /* 내비게이션 위쪽에 10px 여백을 추가 */
+}
+
+nav ul {
+    list-style: none;  /* 내비게이션 목록의 기본 스타일(불릿)을 제거 */
+    padding: 0;  /* 내비게이션 목록의 기본 패딩 제거 */
+}
+
+nav ul li {
+    display: inline;  /* 내비게이션 항목을 가로로 나열 */
+    margin: 0 20px;  /* 각 항목 간의 간격을 20px로 설정 */
+}
+
+nav a {
+    color: #fff;  /* 내비게이션 링크의 글씨 색상은 흰색 */
+    text-decoration: none;  /* 링크의 기본 밑줄을 제거 */
+    font-weight: bold;  /* 링크의 글씨를 굵게 설정 */
+}
+
+nav a:hover {
+    text-decoration: underline;  /* 링크에 마우스를 올리면 밑줄을 추가 */
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    padding: 40px 20px;  /* 메인 콘텐츠의 패딩을 위아래 40px, 좌우 20px로 설정 */
+    text-align: center;  /* 텍스트를 중앙 정렬 */
+}
+
+/* 환영 섹션 스타일 */
+.welcome {
+    background-color: #fff;  /* 배경색을 흰색으로 설정 */
+    padding: 30px;  /* 내부 여백을 30px로 설정 */
+    border-radius: 8px;  /* 부드러운 둥근 모서리 설정 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* 미세한 그림자 추가 */
+    margin: 20px auto;  /* 상하 여백 20px, 좌우는 자동으로 중앙 정렬 */
+    max-width: 800px;  /* 최대 너비를 800px로 설정 */
+}
+
+/* 학교 이미지 스타일 */
+.school-image {
+    width: 100%;  /* 이미지 너비를 부모 요소의 100%로 설정하여 반응형 이미지로 만듦 */
+    height: auto;  /* 이미지의 비율을 유지하면서 자동으로 높이 설정 */
+    border-radius: 8px;  /* 이미지의 모서리를 둥글게 설정 */
+}
+
+/* 푸터 스타일 */
+footer {
+    background-color: #000;  /* 푸터 배경색을 검정색으로 설정 */
+    color: #fff;  /* 텍스트 색상은 흰색으로 설정 */
+    text-align: center;  /* 텍스트를 중앙 정렬 */
+    padding: 10px;  /* 푸터 안쪽 여백을 10px로 설정 */
+    position: relative;  /* 푸터 위치를 상대적으로 설정 */
+    bottom: 0;  /* 푸터를 페이지 맨 아래에 위치시키도록 설정 */
+    width: 100%;  /* 푸터의 너비를 페이지 전체로 설정 */
+    margin-top: 20px;  /* 푸터와 위 요소 간에 20px 간격 설정 */
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- HTML5 문서 선언. 페이지 내용이 한국어로 작성되었음을 명시 -->
+<head>
+    <meta charset="UTF-8"> <!-- 문자 인코딩을 UTF-8로 설정, 다양한 문자가 제대로 표시되도록 함 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 반응형 웹 디자인을 위한 뷰포트 설정 -->
+    <title>커뮤니티</title> <!-- 브라우저 탭에 표시될 제목 -->
+    <link rel="stylesheet" href="static/board.css"> <!-- 외부 CSS 파일을 연결하여 페이지 스타일을 지정 -->
+</head>
+<body> <!-- 본문 내용 시작 -->
+  
+    <!-- 헤더 -->
+    <header>
+        <div class="navbar"> <!-- 네비게이션 바 -->
+            <div class="logo">
+                <h1>학교 커뮤니티</h1> <!-- 페이지 제목 -->
+            </div>
+            <div class="nav-links"> <!-- 네비게이션 링크 -->
+                <a href="/">메인 페이지로 돌아가기</a> <!-- 메인 페이지로 돌아가는 링크 -->
+            </div>
+        </div>
+    </header>
+
+    <!-- 게시글 작성 및 목록 레이아웃 -->
+    <main class="main-content"> <!-- 주요 콘텐츠 섹션 -->
+        <!-- 게시글 작성 폼 (왼쪽) -->
+        <section class="post-form"> <!-- 게시글 작성 영역 -->
+            <h2>게시글 작성</h2> <!-- 게시글 작성 제목 -->
+            <form action="/board" method="post"> <!-- 게시글을 서버로 전송하는 폼 -->
+                <label for="title">제목:</label><br> <!-- 제목 입력 필드 -->
+                <input type="text" id="title" name="title" required><br><br> <!-- 제목 입력 필드, 필수 입력 -->
+                <label for="content">내용:</label><br> <!-- 내용 입력 필드 -->
+                <textarea id="content" name="content" rows="5" cols="30" required></textarea><br><br> <!-- 내용 입력 필드, 필수 입력 -->
+                <button type="submit">올리기</button> <!-- 제출 버튼 -->
+            </form>
+        </section>
+
+        <!-- 게시글 목록 (오른쪽) -->
+        <section class="post-list"> <!-- 게시글 목록 영역 -->
+            <h2>게시글 목록</h2> <!-- 게시글 목록 제목 -->
+            {% for post in posts %} <!-- 게시글을 반복문으로 출력 (템플릿 엔진 구문) -->
+                <div class="post"> <!-- 개별 게시글 -->
+                    <h3>{{ post['title'] }}</h3> <!-- 게시글 제목 -->
+                    <p>{{ post['content'] }}</p> <!-- 게시글 내용 -->
+                    
+                    <!-- 댓글 작성 폼 -->
+                    <form action="/comment/{{ post['id'] }}" method="post"> <!-- 해당 게시글에 댓글을 작성하는 폼 -->
+                        <textarea name="comment" rows="3" cols="30" placeholder="댓글을 작성하세요..."></textarea><br> <!-- 댓글 입력 필드 -->
+                        <button type="submit">댓글 달기</button> <!-- 댓글 작성 제출 버튼 -->
+                    </form>
+
+                    <!-- 댓글 목록 -->
+                    <ul> <!-- 댓글 목록을 나열하는 리스트 -->
+                        {% for comment in post['comments'] %} <!-- 각 게시글의 댓글을 반복문으로 출력 (템플릿 엔진 구문) -->
+                            <li>{{ comment['content'] }}</li> <!-- 댓글 내용 -->
+                        {% endfor %}
+                    </ul>
+
+                    <hr> <!-- 구분선 -->
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+</body>
+</html>

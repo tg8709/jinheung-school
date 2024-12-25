@@ -1,0 +1,101 @@
+/* 기본 스타일 설정 */
+html, body {
+    margin: 0; /* html과 body의 기본 여백을 제거 */
+    padding: 0; /* html과 body의 기본 패딩을 제거 */
+}
+
+/* 전체적인 기본 스타일 설정 */
+body {
+    font-family: 'Arial', sans-serif;  /* 글꼴을 Arial로 설정 */
+    line-height: 1.8;  /* 글자 간의 줄 간격을 1.8로 설정 */
+    color: #333;  /* 글씨 색상은 어두운 회색 */
+    background-color: #f9f9f9;  /* 배경색을 연한 회색으로 설정 */
+}
+
+/* 헤더 스타일 */
+header {
+    text-align: center;  /* 헤더 내 텍스트 중앙 정렬 */
+    margin-top: 0;  /* 헤더의 상단 여백을 0으로 설정 */
+    margin-left: 0;  /* 헤더의 왼쪽 여백을 0으로 설정 */
+    margin-right: 0;  /* 헤더의 오른쪽 여백을 0으로 설정 */
+    margin-bottom: 100px;  /* 헤더 하단에 100px 여백 추가 */
+    background-color: black;  /* 헤더 배경을 검정색으로 설정 */
+    padding: 15px 0;  /* 위아래 여백을 15px로 설정 */
+}
+
+header h1 {
+    font-size: 2.5rem;  /* 헤더 제목 크기를 2.5rem으로 설정 */
+    color: white;  /* 제목 텍스트 색상을 흰색으로 설정 */
+    margin: 0;  /* 제목 주변 여백을 제거 */
+}
+
+/* 정보 테이블 스타일 */
+section.info-table {
+    margin-bottom: 30px;  /* 테이블 하단에 30px 여백을 추가 */
+    padding: 15px;  /* 테이블의 내부 여백을 15px로 설정 */
+    background-color: #fff;  /* 배경색을 흰색으로 설정 */
+    border-radius: 8px;  /* 테이블의 모서리를 둥글게 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 미세한 그림자 추가 */
+}
+
+section.info-table table {
+    width: 100%;  /* 테이블의 너비를 100%로 설정 */
+    border-collapse: collapse;  /* 테이블 셀 간의 경계선을 합침 */
+}
+
+section.info-table th, section.info-table td {
+    padding: 10px;  /* 셀 내부 여백을 10px로 설정 */
+    border: 1px solid #ddd;  /* 셀 경계를 연한 회색으로 설정 */
+    text-align: center;  /* 셀의 텍스트를 중앙 정렬 */
+}
+
+section.info-table th {
+    background-color: #f1f1f1;  /* 테이블 헤더 셀의 배경색을 연한 회색으로 설정 */
+    font-weight: bold;  /* 헤더 셀의 글씨를 굵게 설정 */
+    color: #333;  /* 헤더 텍스트 색상을 어두운 회색으로 설정 */
+}
+
+section.info-table td {
+    background-color: #f9f9f9;  /* 테이블 데이터 셀의 배경색을 연한 회색으로 설정 */
+    color: #555;  /* 데이터 텍스트 색상을 중간 회색으로 설정 */
+}
+
+/* 추가적인 텍스트 스타일 (개요와 사건 사고 섹션) */
+.extra {
+    margin-top: 40px;  /* 섹션 상단에 40px 여백을 추가 */
+    padding: 15px;  /* 섹션 내부 여백을 15px로 설정 */
+    background-color: #fff;  /* 배경색을 흰색으로 설정 */
+    border-radius: 8px;  /* 섹션의 모서리를 둥글게 설정 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 미세한 그림자 추가 */
+}
+
+.extra h1 {
+    font-size: 1.5rem;  /* 제목 크기를 1.5rem으로 설정 */
+    color: #2c3e50;  /* 제목 색상을 어두운 파란색으로 설정 */
+    text-align: left;  /* 제목을 왼쪽 정렬 */
+    margin-bottom: 10px;  /* 제목 하단에 10px 여백을 추가 */
+}
+
+.extra p {
+    font-size: 1rem;  /* 텍스트 크기를 1rem으로 설정 */
+    color: #555;  /* 텍스트 색상을 중간 회색으로 설정 */
+    text-align: left;  /* 텍스트를 왼쪽 정렬 */
+    margin-bottom: 20px;  /* 텍스트 하단에 20px 여백을 추가 */
+}
+
+/* 링크 스타일 */
+a {
+    display: inline-block;  /* 링크를 인라인 블록 요소로 설정 */
+    margin-top: 20px;  /* 링크 상단에 20px 여백을 추가 */
+    padding: 10px 15px;  /* 링크 내부 여백을 10px 15px로 설정 */
+    background-color: #000000;  /* 배경색을 검정색으로 설정 */
+    color: #fff;  /* 텍스트 색상을 흰색으로 설정 */
+    text-decoration: none;  /* 링크의 밑줄을 제거 */
+    border-radius: 5px;  /* 링크의 모서리를 둥글게 설정 */
+    font-size: 1rem;  /* 링크 텍스트 크기를 1rem으로 설정 */
+    text-align: center;  /* 링크 텍스트를 중앙 정렬 */
+}
+
+a:hover {
+    background-color: #1d6fa5;  /* 마우스를 올리면 배경색을 파란색으로 변경 */
+}
